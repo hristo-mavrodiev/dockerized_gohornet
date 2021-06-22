@@ -1,0 +1,22 @@
+version: '3'
+services:
+  hornet:
+    image: gohornet/hornet:latest
+    ulimits:
+      nofile:
+        soft: "8192"
+        hard: "8192"
+    # Best performance via host network:
+    network_mode: host
+    # Else:
+    #ports:
+    #  - "14265:14265"
+    #  - "15600:15600"
+    cap_drop:
+      - ALL
+    volumes:
+      - ./config.json:/app/config.json:ro
+      - ./profiles.json:/app/profiles.json
+      - ./peering.json:/app/peering.json
+      - ./snapshots/mainnet:/app/snapshots/mainnet
+      - ./mainnetdb:/app/mainnetdb
