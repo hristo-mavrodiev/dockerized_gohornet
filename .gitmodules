@@ -1,0 +1,3 @@
+[submodule "reverse-proxy-hornet"]
+	path = reverse-proxy-hornet
+	url = https://github.com/hristo-mavrodiev/reverse-proxy-hornet.git
