@@ -86,7 +86,7 @@ docker-compose down -t 120
 ```
 if the database is corrupted use this command to clean it:
 ```sh
-rm -rf db/*
+rm -rf mainnetdb/*
 ```
 
 
